@@ -13,7 +13,7 @@
 }
 
 /* Animate only the main content */
-.home-main,
+.index-main,
 .about-main,
 .project-main {
     view-transition-name: page-content;
@@ -21,12 +21,12 @@
 
 /* Previous page slides out */
 ::view-transition-old(page-content) {
-    animation: slide-out-left 0.25s ease-in-out both;
+    animation: slide-out-left 0.35s ease-in-out both;
 }
 
 /* New page slides in */
 ::view-transition-new(page-content) {
-    animation: slide-in-right 0.25s ease-in-out both;
+    animation: slide-in-right 0.35s ease-in-out both;
 }
 
 /* Slide animations */
