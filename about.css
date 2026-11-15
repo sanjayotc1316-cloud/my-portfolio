@@ -1,0 +1,347 @@
+
+/* =========================================
+   ABOUT PAGE - GLOBAL CONTENT SETTINGS
+========================================= */
+
+.about-main {
+    flex: 1;
+    width: 100%;
+    padding: 0 35px 25px;
+}
+
+
+/* =========================================
+   ABOUT PAGE TITLE
+========================================= */
+
+.about-title {
+    font-family: "Paytone One", sans-serif;
+    font-size: 82px;
+    font-weight: 400;
+    color: #514B68;
+
+    text-align: center;
+
+    margin-top: 42px;
+    margin-bottom: 22px;
+
+    letter-spacing: 0.01em;
+}
+
+
+/* =========================================
+   BENTO GRID LAYOUT
+========================================= */
+
+.about-grid {
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    gap: 18px;
+    align-items: start;
+}
+
+
+/* LEFT AND RIGHT COLUMNS */
+
+.about-left,
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =========================================
+   LIQUID GLASS CARDS
+========================================= */
+
+.about-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 20px;
+
+    background: #FFFFFF45;
+
+    border: 1px solid #FFFFFF80;
+    border-radius: 13px;
+
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    backdrop-filter: blur(25px) saturate(180%);
+
+    box-shadow:
+        0 8px 25px #514B6812,
+        inset 0 1px 2px #FFFFFFA6;
+
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+
+    color: #373451;
+}
+
+
+/* =========================================
+   CARD HEADINGS
+========================================= */
+
+.about-card h2 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #373451;
+
+    margin-bottom: 14px;
+}
+
+
+
+/* =========================================
+   ABOUT ME CARD
+========================================= */
+
+.about-intro {
+    min-height: 180px;
+}
+
+.about-intro p {
+    font-family: "Paytone One", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    color: #414B68;
+}
+
+
+/* =========================================
+   MY SKILLS CARD
+========================================= */
+
+.about-skills {
+    min-height: 190px;
+}
+
+.about-skills h2 {
+    margin-bottom: 12px;
+}
+
+.about-skills h3 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    color: #41405D;
+
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.about-skills ul {
+    padding-left: 20px;
+    margin-bottom: 4px;
+}
+
+.about-skills li {
+    font-family: "Paytone One", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    color: #514B68;
+}
+
+
+/* =========================================
+   MY JOURNEY CARD
+========================================= */
+
+.about-journey {
+    min-height: 245px;
+}
+
+.about-journey h2 {
+    margin-bottom: 16px;
+}
+
+.about-journey p {
+    font-family: "Paytone One", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.55;
+
+    color:#414B68;
+}
+
+
+/* =========================================
+   CONTACT CARD
+========================================= */
+
+.about-contact {
+    min-height: 176px;
+}
+
+.about-contact h2 {
+    margin-bottom: 14px;
+}
+
+.about-contact p {
+    font-family: "Paytone One", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+
+    text-align: center;
+
+    color: #41405D;
+
+    margin-top: 10px;
+}
+
+.about-contact a {
+    color: #514B68;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.about-contact a:hover {
+    color: #8876D9;
+}
+
+/* SOCIAL MEDIA LINKS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 12px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 28px;
+    height: 28px;
+
+    transition: transform 0.3s ease;
+}
+
+.social-link img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.linkedinlogo {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    .about-main {
+        padding: 0 25px 25px;
+    }
+
+    .about-title {
+        font-size: 65px;
+        margin-top: 35px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-left,
+    .about-right {
+        gap: 14px;
+    }
+
+    .about-journey p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 650px) {
+
+    .about-main {
+        padding: 0 18px 25px;
+    }
+
+    .about-title {
+        font-size: clamp(45px, 11vw, 65px);
+
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .about-grid {
+        gap: 14px;
+    }
+
+    .about-left,
+    .about-right {
+        gap: 14px;
+    }
+
+    .about-card {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .about-card h2 {
+        font-size: 16px;
+    }
+
+    .about-intro p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .about-skills h3 {
+        font-size: 11px;
+    }
+
+    .about-skills li {
+        font-size: 10px;
+    }
+
+    .about-journey p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .about-contact p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+}

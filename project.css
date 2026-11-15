@@ -1,0 +1,294 @@
+
+/* =========================================
+   PROJECT PAGE - GLOBAL SETTINGS
+========================================= */
+
+.project-main {
+    flex: 1;
+    width: 100%;
+    padding: 0 40px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =========================================
+   PROJECT CARDS - LIQUID GLASS
+========================================= */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #FFFFFF45;
+    border: 1px solid #FFFFFF80;
+    border-radius: 18px;
+
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    backdrop-filter: blur(25px) saturate(180%);
+
+    box-shadow:
+        0 8px 25px #514B6812,
+        inset 0 1px 2px #FFFFFFA6;
+
+    padding: 20px;
+
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    color: #373451;
+}
+
+
+/* =========================================
+   PROJECT NUMBER / TITLE
+========================================= */
+
+.project-number {
+    font-family: "Paytone One", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+
+    color: #514B68;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   FEATURED BOOKWISE PROJECT
+========================================= */
+
+.featured-project {
+    margin-top: 48px;
+    min-height: 270px;
+}
+
+.featured-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 34px;
+    align-items: center;
+}
+
+
+/* PROJECT IMAGES */
+
+.project-image {
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid #FFFFFF99;
+    border-radius: 10px;
+
+    background: #FFFFFF30;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 198px;
+
+    object-fit: cover;
+    object-position: top center;
+
+    transition: transform 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.035);
+}
+
+
+/* FEATURED DESCRIPTION */
+
+.project-description h3 {
+    font-family: "Paytone One", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+
+    color: #373451;
+    margin-bottom: 14px;
+}
+
+.project-description p {
+    font-family: "Paytone One", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.5;
+    color: #41405D;
+}
+
+
+/* =========================================
+   OTHER PROJECTS GRID
+========================================= */
+
+.other-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.small-project {
+    min-height: 270px;
+}
+
+.small-project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.small-project .project-image img {
+    height: 145px;
+}
+
+.small-project-description {
+    font-family: "Paytone One", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.5;
+    color: #41405D;
+}
+
+
+/* =========================================
+   SOURCE CODE BUTTON
+========================================= */
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 14px;
+}
+
+.source-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 9px 17px;
+
+    font-family: "Paytone One", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+
+    color: #514B68;
+    text-decoration: none;
+
+    background: #FFFFFF45;
+    border: 1px solid #FFFFFF99;
+    border-radius: 30px;
+
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 4px 12px #514B681A,
+        inset 0 1px 2px #FFFFFFA6;
+
+    transition: 0.3s ease;
+}
+
+.source-button:hover {
+    background: #FFFFFF75;
+    border-color: #FFFFFFCC;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px #514B6826,
+        inset 0 1px 2px #FFFFFFCC;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .project-main {
+        padding: 0 25px 25px;
+    }
+
+    .featured-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+
+    .project-description h3 {
+        font-size: 21px;
+    }
+
+    .project-description p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 650px) {
+
+    .project-main {
+        padding: 0 18px 25px;
+        gap: 14px;
+    }
+
+    .featured-project {
+        margin-top: 30px;
+    }
+
+    .featured-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .project-card {
+        padding: 17px;
+        border-radius: 15px;
+    }
+
+    .project-number {
+        font-size: 15px;
+    }
+
+    .project-image img {
+        height: 180px;
+    }
+
+    .project-description h3 {
+        font-size: 20px;
+    }
+
+    .project-description p {
+        font-size: 13px;
+    }
+
+    .other-projects {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .small-project {
+        min-height: auto;
+    }
+
+    .small-project .project-image img {
+        height: 180px;
+    }
+
+    .small-project-description {
+        font-size: 12px;
+    }
+
+}

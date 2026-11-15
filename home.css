@@ -1,0 +1,475 @@
+
+/* ==============================
+   GLOBAL SETTINGS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #E8E5F0;
+
+    --primary-text: #514B68;
+    --secondary-text: #625B78;
+
+    --glass: #FFFFFF52;
+    --glass-border: #FFFFFF80;
+
+    --glass-shadow: #514B681F;
+
+    --accent: #8876D9;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+
+    font-family: 'DM Sans', sans-serif;
+
+    color: var(--primary-text);
+
+    background: url(assets/Home.png) center / cover no-repeat fixed;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.site-header {
+    width: 100%;
+    height: 88px;
+
+    padding: 12px 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
+
+    background: #FFFFFF12;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    border-bottom: 1px solid #FFFFFF52;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 225px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-family: 'Paytone One', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    color: var(--primary-text);
+
+    background: #FFFFFF52;
+
+    border: 1px solid #FFFFFF80;
+    border-radius: 22px;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 5px 18px #514B681F,
+        inset 0 1px 2px #FFFFFFB8;
+
+    transition: 0.3s ease;
+}
+
+
+
+.logo:hover {
+    background: #FFFFFF80;
+}
+
+
+/* NAVIGATION CONTAINER */
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* NAVIGATION LINKS */
+
+/* NAVIGATION LINKS */
+
+
+/* ==============================
+   LIQUID GLASS NAVIGATION
+================================ */
+
+
+/* ==============================
+   COLOURFUL LIQUID GLASS NAVBAR
+================================ */
+
+.nav-link {
+    min-width: 180px;
+    height: 58px;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    text-decoration: none;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+
+    color: #514B68;
+
+    /* Transparent glass surface */
+    background: #FFFFFF0D;
+
+    border: 1px solid #FFFFFF66;
+    border-radius: 50px;
+
+    /* Glass transparency and blur */
+    backdrop-filter: blur(12px) saturate(200%);
+    -webkit-backdrop-filter: blur(12px) saturate(200%);
+
+    /* Subtle glass depth */
+    box-shadow:
+        0 8px 24px #514B681A,
+        inset 0 1px 1px #FFFFFF66,
+        inset 0 -1px 2px #FFFFFF1A;
+
+    transition: all 0.35s ease;
+}
+
+
+/* SUBTLE REFLECTIVE HIGHLIGHT */
+
+.nav-link::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF38 0%,
+        #FFFFFF08 35%,
+        #D9C9FF12 65%,
+        #FFFFFF1A 100%
+    );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* HOVER */
+
+.nav-link:hover {
+    background: #FFFFFF1A;
+
+    border-color: #FFFFFF99;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 28px #514B6826,
+        inset 0 1px 2px #FFFFFF80,
+        inset 0 -1px 3px #FFFFFF26;
+}
+
+
+/* ACTIVE DOT */
+
+.nav-link[aria-current="page"]::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    left: 50%;
+    bottom: 6px;
+
+    transform: translateX(-50%);
+
+    background: #514B68;
+    border-radius: 50%;
+}
+
+
+
+/* ==============================
+   MAIN CONTENT
+================================ */
+
+.home-main {
+    flex: 1;
+
+    padding: 0 55px;
+}
+
+
+/* INTRODUCTION */
+
+.intro-section {
+    width: 100%;
+
+    margin-top: 24px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* DESCRIPTION */
+
+.intro-description {
+    padding-top: 45px;
+
+    font-family: 'Paytone One', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+
+    line-height: 1.85;
+
+    color: var(--primary-text);
+}
+
+
+/* NAME */
+
+.intro-name {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+
+    color: var(--primary-text);
+}
+
+
+/* ==============================
+   HERO HEADING
+================================ */
+
+.hero-section {
+    margin-top: 125px;
+}
+
+.hero-heading {
+    font-family: 'Paytone One', sans-serif;
+
+    font-size: clamp(76px, 11vw, 160px);
+    font-weight: 400;
+
+    line-height: 1.15;
+    letter-spacing: 0.09em;
+
+    color: var(--primary-text);
+}
+
+.hero-heading span {
+    color: #8876D9;
+    font-family: 'Paytone One', sans-serif;
+
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+.site-footer {
+    width: 100%;
+
+    padding: 0 55px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+
+    color: var(--secondary-text);
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1100px) {
+
+    .site-header {
+        padding: 18px 25px;
+    }
+
+    .logo {
+        width: 170px;
+        font-size: 28px;
+        font-family: 'Paytone One', sans-serif;
+    }
+    
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .nav-link {
+        min-width: 130px;
+        font-size: 16px;
+    }
+
+    .home-main {
+        padding: 0 35px;
+    }
+
+    .hero-heading {
+        font-size: clamp(70px, 10vw, 115px);
+    }
+
+    .site-footer {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .site-header {
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        height: 55px;
+        font-size: 25px;
+        font-family: 'Paytone One', sans-serif;
+    }
+
+    .navbar {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .nav-link {
+        flex: 1;
+        min-width: 0;
+        height: 52px;
+
+        padding: 0 8px;
+
+        font-size: 14px;
+    }
+
+    .nav-link[aria-current="page"]::after {
+        width: 7px;
+        height: 7px;
+        bottom: 5px;
+    }
+
+    .home-main {
+        padding: 0 22px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .intro-description {
+        padding-top: 25px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .intro-name {
+        align-self: flex-end;
+        font-size: 28px;
+    }
+
+    .hero-section {
+        margin-top: 75px;
+    }
+
+    .hero-heading {
+        font-size: clamp(48px, 12vw, 76px);
+        letter-spacing: -0.055em;
+        line-height: 1.2;
+    }
+
+    .site-footer {
+        padding: 25px 22px;
+    }
+
+    .site-footer p {
+        font-size: 10px;
+    }
+}
+
+/* ==============================
+   FIGMA LAYOUT REFINEMENTS
+================================ */
+
+@media (min-width: 651px) {
+
+    /* Move the hero heading upwards */
+    .hero-section {
+        margin-top: 10px;
+    }
+
+    /* Refine heading proportions */
+    .hero-heading {
+        font-size: clamp(76px, 10.8vw, 178px);
+        line-height: 1.15;
+        letter-spacing: -0.065em;
+    }
+
+}

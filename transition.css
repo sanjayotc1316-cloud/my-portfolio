@@ -1,0 +1,65 @@
+
+/* Enable transitions between HTML pages */
+
+@view-transition {
+    navigation: auto;
+}
+
+/* Keep navbar and footer unchanged */
+.site-header,
+.site-footer,
+.project-main {
+    view-transition-name: none;
+}
+
+/* Animate only the main content */
+.home-main,
+.about-main,
+.project-main {
+    view-transition-name: page-content;
+}
+
+/* Previous page slides out */
+::view-transition-old(page-content) {
+    animation: slide-out-left 0.25s ease-in-out both;
+}
+
+/* New page slides in */
+::view-transition-new(page-content) {
+    animation: slide-in-right 0.25s ease-in-out both;
+}
+
+/* Slide animations */
+
+@keyframes slide-out-left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-45px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(45px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(page-content),
+    ::view-transition-new(page-content) {
+        animation-duration: 0.01ms;
+    }
+}
