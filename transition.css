@@ -7,8 +7,7 @@
 
 /* Keep navbar and footer unchanged */
 .site-header,
-.site-footer,
-.project-main {
+.site-footer {
     view-transition-name: none;
 }
 
